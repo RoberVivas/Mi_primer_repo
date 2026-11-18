@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Compuya: periféricos y accesorios tecnológicos para conectar, trabajar y disfrutar.">
+<title>Compuya | Tecnología que te conecta</title>
+<style>
+:root{--navy:#092653;--blue:#0878df;--orange:#ff7900;--ink:#17243a;--muted:#64748b;--pale:#f3f7fc;--white:#fff}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none} .wrap{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--navy);color:#dce9fb;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.2px}
+header{background:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid #e8eef6}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:26px;color:var(--navy);letter-spacing:-1px}
+.brand img{width:54px;height:54px;object-fit:contain} .brand span span{color:var(--orange)}
+nav{display:flex;gap:28px;color:#34445c;font-size:14px;font-weight:650} nav a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 21px;background:var(--orange);color:#fff;font-weight:800;font-size:14px;cursor:pointer;box-shadow:0 8px 20px #ff790033}
+.btn.blue{background:var(--navy);box-shadow:none} .hero{background:radial-gradient(circle at 80% 30%,#e3f1ff 0,transparent 30%),linear-gradient(115deg,#f5f9ff,#fff 65%);padding:76px 0 68px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:38px}
+.eyebrow{display:inline-block;color:var(--blue);background:#e8f3ff;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:850;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:clamp(42px,5.2vw,66px);line-height:1.02;letter-spacing:-2.8px;color:var(--navy);margin:20px 0}
+h1 em{font-style:normal;color:var(--orange)} .lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:540px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px} .hero-art{background:#fff;border:1px solid #e8eff8;border-radius:28px;padding:20px;box-shadow:0 24px 70px #0b2b5415;position:relative}
+.hero-art img{width:100%;display:block;border-radius:18px} .float-tag{position:absolute;right:-12px;bottom:22px;background:var(--navy);color:#fff;padding:13px 17px;border-radius:14px;font-size:13px;font-weight:750;box-shadow:0 12px 25px #09265333}
+.benefits{padding:22px 0;background:#fff;border-bottom:1px solid #edf1f6}
+.benefit-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .benefit{display:flex;align-items:center;justify-content:center;gap:12px;color:#34445c;font-weight:700;font-size:14px}
+.bicon{width:38px;height:38px;display:grid;place-items:center;background:#eef6ff;border-radius:12px;font-size:19px}
+section{padding:76px 0} .section-head{text-align:center;max-width:650px;margin:0 auto 38px} .section-head h2{font-size:36px;letter-spacing:-1.2px;color:var(--navy);margin:0 0 12px} .section-head p{color:var(--muted);line-height:1.6;margin:0}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:17px} .cat{border:1px solid #e7edf5;border-radius:20px;padding:25px 20px;background:#fff;transition:.2s} .cat:hover{transform:translateY(-5px);box-shadow:0 16px 35px #09265312;border-color:#c8ddf6}
+.cat .emoji{font-size:34px} .cat h3{margin:15px 0 6px;color:var(--navy)} .cat p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+.featured{background:var(--pale)} .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px} .product{background:#fff;border:1px solid #e7edf5;border-radius:20px;overflow:hidden} .product-visual{height:175px;display:grid;place-items:center;background:linear-gradient(135deg,#e9f4ff,#f9fbff);font-size:68px} .product-body{padding:21px} .product small{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.8px} .product h3{color:var(--navy);margin:8px 0} .product p{font-size:14px;color:var(--muted);line-height:1.55;min-height:44px} .product a{color:var(--orange);font-size:14px;font-weight:850}
+.cta{padding:64px 0;background:linear-gradient(110deg,var(--navy),#0b4380);color:#fff} .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px} .cta h2{font-size:34px;margin:0 0 10px;letter-spacing:-1px} .cta p{margin:0;color:#d6e6f8}
+footer{background:#071b38;color:#d6e3f4;padding:38px 0 22px} .foot{display:flex;justify-content:space-between;gap:30px;align-items:center} .foot strong{font-size:24px;color:#fff} .foot strong span{color:var(--orange)} .foot p{color:#a9bdd6;font-size:13px} .copyright{border-top:1px solid #ffffff20;margin-top:25px;padding-top:18px;color:#91a8c5;font-size:12px;text-align:center}
+@media(max-width:800px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero-art{max-width:560px;margin:auto}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr 1fr}.cta-inner{display:block}.cta .btn{margin-top:22px}}
+@media(max-width:520px){.brand{font-size:22px}.brand img{width:44px;height:44px}.nav{height:68px}h1{font-size:43px}.lead{font-size:16px}section{padding:55px 0}.benefit-row{grid-template-columns:1fr;gap:12px}.benefit{justify-content:flex-start}.categories,.products{grid-template-columns:1fr 1fr;gap:11px}.cat{padding:18px 14px}.cat h3{font-size:15px}.product-visual{height:125px;font-size:48px}.product-body{padding:14px}.product h3{font-size:15px}.product p{font-size:12px}.section-head h2{font-size:29px}.foot{display:block}}
+
+.contact-form{max-width:800px;margin:auto;background:#fff;border-radius:22px;padding:30px;box-shadow:0 20px 55px #00132c30;color:var(--ink)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:19px}
+.contact-form label{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:800;color:var(--navy)}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid #d9e2ee;border-radius:10px;padding:13px 14px;font:inherit;font-size:14px;color:var(--ink);background:#fbfdff;outline:none}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #0878df18}
+.contact-form textarea{resize:vertical;min-height:120px}
+.contact-form .full{grid-column:1/-1}
+.form-bottom{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px}
+.form-bottom p{margin:0;color:var(--muted);font-size:12px;line-height:1.5;flex:1;min-width:220px}
+@media(max-width:520px){.contact-form{padding:20px}.form-grid{grid-template-columns:1fr}.contact-form .full{grid-column:auto}}
+\n</style>
+</head>
+<body>
+<div class="topbar">COMPuya · Tecnología para conectar, trabajar y disfrutar</div>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio"><img src="compuya-logo.webp" alt="Logo Compuya"><span>COMPU<span>YA</span></span></a>
+<nav><a href="#inicio">Inicio</a><a href="#categorias">Categorías</a><a href="#destacados">Destacados</a><a href="#contacto">Contacto</a></nav>
+<a class="btn blue" href="#contacto">Contáctanos</a>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div><span class="eyebrow">Tu mundo, mejor conectado</span><h1>La tecnología que necesitas, <em>está aquí.</em></h1>
+<p class="lead">Encuentra periféricos y accesorios tecnológicos para llevar tu espacio de trabajo, estudio y entretenimiento al siguiente nivel.</p>
+<div class="actions"><a class="btn" href="#categorias">Explorar productos</a><a class="btn blue" href="#contacto">Solicitar asesoría</a></div></div>
+<div class="hero-art"><img src="compuya-logo.webp" alt="Identidad visual de Compuya"><div class="float-tag">Conecta · Trabaja · Disfruta</div></div>
+</div></section>
+<div class="benefits"><div class="wrap benefit-row"><div class="benefit"><span class="bicon">🎧</span>Accesorios para cada necesidad</div><div class="benefit"><span class="bicon">💻</span>Opciones para estudio y trabajo</div><div class="benefit"><span class="bicon">✨</span>Asesoría para elegir mejor</div></div></div>
+<section id="categorias"><div class="wrap"><div class="section-head"><h2>Explora nuestras categorías</h2><p>Todo lo que necesitas para completar tu setup, mejorar tu productividad y disfrutar cada conexión.</p></div>
+<div class="categories">
+<div class="cat"><div class="emoji">⌨️</div><h3>Teclados</h3><p>Opciones para escribir, crear y jugar con comodidad.</p></div>
+<div class="cat"><div class="emoji">🖱️</div><h3>Mouse</h3><p>Precisión y control para tus tareas diarias.</p></div>
+<div class="cat"><div class="emoji">🎧</div><h3>Audio</h3><p>Audífonos y diademas para escuchar y comunicarte.</p></div>
+<div class="cat"><div class="emoji">🖥️</div><h3>Accesorios</h3><p>Webcams, memorias, hubs y más complementos.</p></div>
+</div></div></section>
+<section class="featured" id="destacados"><div class="wrap"><div class="section-head"><h2>Prepara tu espacio ideal</h2><p>Conoce algunas de las soluciones que puedes encontrar en Compuya. Consulta disponibilidad y referencias.</p></div>
+<div class="products">
+<article class="product"><div class="product-visual">⌨️</div><div class="product-body"><small>Productividad</small><h3>Teclados</h3><p>Escritura cómoda para estudiar, trabajar o crear.</p><a href="#contacto">Consultar producto →</a></div></article>
+<article class="product"><div class="product-visual">🖱️</div><div class="product-body"><small>Precisión</small><h3>Mouse y combos</h3><p>Control y comodidad para tu computador.</p><a href="#contacto">Consultar producto →</a></div></article>
+<article class="product"><div class="product-visual">🎧</div><div class="product-body"><small>Entretenimiento</small><h3>Audífonos</h3><p>Conecta con tu música, reuniones y juegos.</p><a href="#contacto">Consultar producto →</a></div></article>
+</div></div></section>
+<section class="cta" id="contacto">
+<div class="wrap">
+  <div class="section-head" style="margin-bottom:30px">
+    <h2 style="color:#fff">Contáctanos</h2>
+    <p style="color:#d6e6f8">Déjanos tus datos y cuéntanos qué producto necesitas. En Compuya estaremos listos para asesorarte.</p>
+  </div>
+  <form class="contact-form" id="compuyaContactForm">
+    <div class="form-grid">
+      <label>Nombre
+        <input type="text" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
+      </label>
+      <label>Teléfono
+        <input type="tel" name="telefono" placeholder="Tu número de contacto" autocomplete="tel" required>
+      </label>
+      <label>Correo electrónico
+        <input type="email" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
+      </label>
+      <label>Tipo de producto
+        <select name="tipo_producto" required>
+          <option value="">Selecciona una categoría</option>
+          <option>Teclados</option>
+          <option>Mouse</option>
+          <option>Audífonos y audio</option>
+          <option>Webcams</option>
+          <option>Monitores</option>
+          <option>Memorias y almacenamiento</option>
+          <option>Otros periféricos o accesorios</option>
+        </select>
+      </label>
+      <label class="full">Descripción
+        <textarea name="descripcion" rows="5" placeholder="Cuéntanos qué producto buscas, características o cantidad..." required></textarea>
+      </label>
+    </div>
+    <div class="form-bottom">
+      <button class="btn" type="submit">Enviar solicitud</button>
+      <p id="formNotice" role="status" aria-live="polite">Al enviar, podremos revisar tu solicitud cuando el formulario esté conectado a un servicio de recepción.</p>
+    </div>
+  </form>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><strong>COMPU<span>YA</span></strong><p>Conecta · Trabaja · Disfruta</p></div><p>Periféricos y accesorios tecnológicos</p></div><div class="copyright">© 2026 Compuya. Todos los derechos reservados.</div></div></footer>
+
+<script>
+document.getElementById('compuyaContactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+  document.getElementById('formNotice').textContent =
+    '¡Gracias! El formulario está completo. Para recibir estas solicitudes, falta conectarlo a un correo o sistema de gestión.';
+  this.reset();
+});
+</script>
+\n</body></html>
